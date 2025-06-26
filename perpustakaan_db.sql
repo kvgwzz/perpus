@@ -37,14 +37,14 @@ CREATE TABLE `book` (
 
 insert  into `book`(`book_id`,`book_title`,`category`,`author`,`book_copies`,`publisher_name`,`isbn`,`copyright_year`,`status`) values 
 (1,'Database dan ERD','Teknologi','Fajar Agung',4,'Unpam Press','1232123432123',2021,'1'),
-(2,'Matematika Diskrit','Pendidikan','Saptono',2,'Erlangga','1234243463455',2021,'0'),
+(2,'Matematika Diskrit','Pendidikan','Saptono',3,'Erlangga','1234243463455',2021,'1'),
 (3,'Database Relational','Teknologi','Fajar Agung',4,'Unpam Press','1232123432123',2022,'1'),
 (4,'Logika Matematika','Pendidikan','Saptono',2,'Erlangga','1234243463455',2021,'1'),
 (5,'Database Fundamental','Teknologi','Fajar Agung',4,'Unpam Press','1232123456454',2024,'1'),
 (6,'Database Intermediate','Teknologi','Fajar Agung',4,'Unpam Press','1232178978895',2021,'1'),
-(7,'Database','Teknologi','Fajar Agung',4,'Unpam Press','1232123424244',2000,'0'),
+(7,'Database','Teknologi','Fajar Agung',4,'Unpam Press','1232123424244',2000,'1'),
 (8,'Pengantar teknologi','Pendidikan','Saptono',2,'Erlangga','1234243789634',2011,'1'),
-(9,'Data Mining','Teknologi','Fajar Agung',4,'Unpam Press','1232123434533',2011,'0');
+(9,'Data Mining','Teknologi','Fajar Agung',4,'Unpam Press','1232123434533',2011,'1');
 
 /*Table structure for table `borrow` */
 
@@ -106,7 +106,7 @@ insert  into `borrowdetails`(`borrow_details_id`,`book_id`,`borrow_id`,`borrow_s
 (13,3,4,1,'2025-06-20'),
 (14,9,5,0,NULL),
 (15,7,5,0,NULL),
-(16,2,6,1,NULL);
+(16,2,6,2,'2025-06-26');
 
 /*Table structure for table `member` */
 
@@ -126,7 +126,7 @@ CREATE TABLE `member` (
   `status` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`member_id`) USING BTREE,
   UNIQUE KEY `email` (`email`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `member` */
 
@@ -134,7 +134,9 @@ insert  into `member`(`member_id`,`firstname`,`lastname`,`username`,`email`,`pas
 (4,'Fajar','A',NULL,'fajar@gmail.com',NULL,'L','depok','09821392','Guru',1),
 (5,'Sarah','Azhari',NULL,'sarah@gmail.co',NULL,'P','depok','09821392','Siswa',1),
 (6,'Valentino','Ronald',NULL,'Ronald@gmail.com',NULL,'L','Depok','09821392','Siswa',1),
-(7,'tester','akun','tester','tester1@mail.com','$2y$10$mHHviyyui1X7Ti4pwOe8XOj3RMwMKjwad8WShEBJyRtxMWcO0t1Lq','L','jakarta','0800','siswa',1);
+(7,'tester','akun','tester','tester1@mail.com','$2y$10$mHHviyyui1X7Ti4pwOe8XOj3RMwMKjwad8WShEBJyRtxMWcO0t1Lq','L','jakarta','0800','siswa',1),
+(12,'Darma','Wijaya','darmawijaya','darma@mail.com','$2y$10$NUMa3kAEHYvS/7WcOMY.9OPccLOcnKQkYLKvfnGGsPqnBCjowEAem','L','Indonesia','08000','siswa',1),
+(13,'Dallu','Gabriel','dallu','dallu@mail.com','$2y$10$4eCaiX17O5TmnRTvdZB2/.gUMrk7etMCTDo6TmWIq0hGPbIlzF4Gu','L','Pamulang','0800000','Siswa',1);
 
 /*Table structure for table `users` */
 
